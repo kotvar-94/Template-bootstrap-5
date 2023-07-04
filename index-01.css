@@ -1,0 +1,298 @@
+:root{
+    --orange: #FF6F0F;
+    --secondary: #FFF0E6;
+    --light: #F8F8F9;
+    --dark: #001D23;
+    --transition: 0.4s;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+.main-btn{
+    color: var(--orange);
+    border: 1px solid var(--orange);
+    padding: 0.6rem 1rem;
+    transition: var(--transition);
+}
+.main-btn:hover{
+    color: white;
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+}
+.main-btn i{
+    color: var(--orange);
+}
+.main-btn-two{
+    padding: 0.6rem 1rem;
+    background-color: var(--orange);
+    color: white;
+    transition: var(--transition);
+}
+.main-btn-two:hover{
+    background-color: transparent;
+    color: var(--orange);
+}
+.main-span{
+    color: var(--orange);
+    background-color: var(--secondary);
+}
+/* Start Top Bar */
+.top-bar{
+    border-bottom: 1px solid rgba(255, 255, 255, 20%);
+    height: 40px;
+    z-index: 1;
+}
+/* End Top Bar */
+/* Start Navbar */
+.navbar{
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    top: 45px;
+}
+.navbar .navbar-toggler-icon{
+    color: var(--secondary);
+}
+.navbar .navbar-nav .nav-item .nav-link{
+    padding: 15px 0;
+    margin-right: 25px;
+    color: var(--light);
+    transition: var(--transition);
+}
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-item .active,
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    color: var(--orange);
+}
+
+/* End Navbar */
+/* Start Landing */
+.landing{
+    background-image: url("image/landing.jpg");
+    background-size: cover;
+    height: calc(100vh + 100px);
+    position: relative;
+}
+.landing::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100vh + 100px);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 29, 35, .8);
+}
+.landing .container{
+    max-width: 700px;
+}
+/* End Landing */
+/* Start Feature */
+.feature .all-box{
+    border-top: 5px solid var(--orange);
+}
+.feature .all-box .box-top{
+    background-color: var(--orange);
+}
+.feature .all-box .progress{
+    height: 5px;
+    overflow: visible;
+}
+.feature .all-box .progress .progress-bar{
+    position: relative;
+    overflow: visible;
+    border-radius: 0;
+    transition: 5s;
+}
+.feature .all-box .progress .progress-bar span{
+    position: absolute;
+    top: -7px;
+    right: 0;
+    width: 40px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    background: var(--orange);
+    color: white;
+}
+.feature .all-box .image .link{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background-color: rgb(0 0 0 / 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+.feature .all-box:hover .image .link{
+    height: 100%;
+    opacity: 1;
+}
+/* End Feature */
+/* Start Donate */
+.donate{
+    background-image: url("image/landing.jpg");
+    background-size: cover;
+    position: relative;
+}
+.donate::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 29, 35, .8);
+}
+.donate input:focus{
+    transition: var(--transition);
+    box-shadow: 0 0 6px 4px rgb(255 111 15 / 40%);
+}
+.donate ul li{
+    transition: var(--transition);
+}
+.donate ul .active,
+.donate ul li:hover{
+    cursor: pointer;
+    color: var(--orange);
+    border: 1px solid var(--orange);
+}
+/* End Donate */
+/* Start Service */
+.servic .box{
+    box-shadow: 0 0 12px 0 rgb(0, 0, 0 , 20%);
+}
+.servic .box svg:not(:last-child){
+    color: var(--orange);
+}
+/* End Service */
+/* Start Team */
+.team .box {
+    position: relative;
+    overflow: hidden;
+}
+.team .box img{
+    position: relative;
+    transition: var(--transition);
+    top: 0;
+    height: 300px;
+}
+.team .box:hover img{
+    top: -40px;
+}
+.team .box .info{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -40px;
+    transition: var(--transition);
+}
+.team .box:hover .info{
+    bottom: 0;
+}
+.team .box .info p,
+.team .box .info ul li{
+    color: var(--orange);
+}
+/* End Team */
+/* Start Testimonial */
+.testimon .carousel-item{
+    height: 380px;
+}
+.testimon .carousel-item img{
+    background-color: var(--orange);
+    width: 100px;
+    height: 100px;
+}
+.testimon .carousel-caption{
+    background-color: var(--orange);
+    color: white;
+}
+.testimon .carousel-dark button{
+    color: #FF6F0F;
+    transition: var(--transition);
+    opacity: 0.3;
+}
+.testimon .carousel-control-prev{
+    top: -70%;
+    left: 25%;
+}
+.testimon .carousel-control-prev:hover{
+    opacity: 1;
+    left: 30%;
+}
+.testimon .carousel-control-next{
+    top: -70%;
+    right: 25%;
+}
+.testimon .carousel-control-next:hover{
+    opacity: 1;
+    right: 30%;
+}
+/* End Testimonial */
+
+/* Start Footer */
+.footer{
+    background-color: var(--dark);
+    color: transparent;
+}
+.footer .logo{
+    color: var(--orange);
+    letter-spacing: -3px;
+}
+.footer .social li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.5);
+    width: 40px;
+    height: 40px;
+    transition: var(--transition);
+}
+.footer .social li a:hover{
+    color: white;
+    border-color: white;
+}
+.footer .links li a{
+    display: block;
+    text-decoration: none;
+    color: rgba(255,255,255,0.5);
+    transition: var(--transition);
+}
+.footer .links li a::before{
+    position: relative;
+    content: "\f105";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    color: rgba(255,255,255,0.5);
+    margin-right: 10px;
+}
+.footer .links li a:hover{
+    color: white;
+    letter-spacing: 1px;
+}
+.footer .input:focus{
+    color: rgba(255,255,255,0.5);
+}
+/* End Footer */
+/* Start Copyright */
+.copyright{
+    background-color: var(--dark);
+    border-top: 1px solid rgba(255,255,255,0.3);
+}
+.copyright a{
+    text-decoration: none;
+    color: white;
+    transition: var(--transition);
+}
+.copyright a:hover{
+    color: var(--orange);
+}
+/* End Copyright */
